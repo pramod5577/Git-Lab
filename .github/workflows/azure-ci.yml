@@ -44,3 +44,16 @@ jobs:
             echo "GitHub secret is missing - secret test failed"
             exit 1
           fi
+
+      - name: Generate CI report
+        run: |
+          echo "GitHub Actions CI Report" > ci-report.txt
+          echo "Application: $APP_NAME" >> ci-report.txt
+          echo "Environment: $ENVIRONMENT" >> ci-report.txt
+          echo "CI validation completed successfully" >> ci-report.txt
+
+      - name: Upload CI artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-report
+          path: ci-report.txt
