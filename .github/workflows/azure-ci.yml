@@ -11,6 +11,10 @@ on:
 
   workflow_dispatch:
 
+env:
+  APP_NAME: Git-Lab
+  ENVIRONMENT: Lab
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,3 +28,8 @@ jobs:
           echo "GitHub Actions CI pipeline started"
           echo "Repository checkout successful"
           if [ -f README.md ]; then echo "README.md exists - CI test passed"; else echo "README.md missing - CI test failed"; exit 1; fi
+
+      - name: Display environment variables
+        run: |
+          echo "Application Name: $APP_NAME"
+          echo "Environment: $ENVIRONMENT"
