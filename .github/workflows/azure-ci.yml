@@ -57,3 +57,15 @@ jobs:
         with:
           name: ci-report
           path: ci-report.txt
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy application
+        run: |
+          echo "Starting deployment..."
+          echo "Build completed successfully"
+          echo "CI artifact is ready"
+          echo "Deployment to Azure would happen here"
+          echo "Deployment completed successfully"
