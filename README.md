@@ -5,3 +5,5 @@ Git commands, branching, commits, remote repositories,
 and CI/CD basics.
 
 Author: Pramod Chougule
+
+## Git Commands
