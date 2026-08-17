@@ -23,4 +23,4 @@ jobs:
         run: |
           echo "GitHub Actions CI pipeline started"
           echo "Repository checkout successful"
-          echo "CI test completed successfully"
+          if [ -f README.md ]; then echo "README.md exists - CI test passed"; else echo "README.md missing - CI test failed"; exit 1; fi
