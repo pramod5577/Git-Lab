@@ -7,3 +7,5 @@ and CI/CD basics.
 Author: Pramod Chougule
 
 ## Git Commands
+
+## Fetch vs Pull
